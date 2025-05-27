@@ -21,5 +21,6 @@
     playerctl
     git
     spotify
+    plymouth
   ];
 }
