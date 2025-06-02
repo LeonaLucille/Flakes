@@ -5,5 +5,6 @@
     ./waybar.nix
     ./binds.nix
     ./rofi.nix
+    ./hyprpaper.nix
   ];
 }
