@@ -35,8 +35,8 @@ in {
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        "col.active_border" = "rgb(#${config.lib.stylix.colors.base00})";
-        "col.inactive_border" = "#${config.lib.stylix.colors.base00}";
+        "col.active_border" = "rgb(${config.lib.stylix.colors.base00}) 45deg";
+        "col.inactive_border" = "rgb(${config.lib.stylix.colors.base00})";
         resize_on_border = true;
         allow_tearing = false;
         layout = "dwindle";
@@ -84,11 +84,10 @@ in {
       input = {
         kb_layout = "de";
       };
-
-      extraConfig = "
+    };
+    extraConfig = "
       monitor=DP-2,highrr,auto,auto
       monitor=DP-3,1920x1080@74.99Hz,auto,auto
     ";
-    };
   };
 }

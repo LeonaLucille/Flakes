@@ -5,5 +5,6 @@
     ./Hyprland
     ./stylix.nix
     ./xdg.nix
+    ./Security
   ];
 }

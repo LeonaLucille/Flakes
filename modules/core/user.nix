@@ -24,6 +24,7 @@ in {
       "input"
       "kvm"
       "libvirtd"
+      "jackaudio"
     ];
   };
 
