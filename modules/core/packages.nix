@@ -22,5 +22,6 @@
     git
     spotify
     plymouth
+    terraform
   ];
 }

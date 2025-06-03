@@ -16,8 +16,8 @@
         swtpm.enable = true;
       };
     };
-    docker.enable = false;
-    podman.enable = true;
+    docker.enable = true;
+    podman.enable = false;
   };
   programs = {
     virt-manager.enable = true;
@@ -25,6 +25,7 @@
   environment.systemPackages = with pkgs; [
     virt-viewer # View Virtual Machines
     swtpm
+    docker-compose
   ];
   environment.etc = {
     "ovmf/edk2-x86_64-secure-code.fd" = {
