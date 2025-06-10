@@ -23,5 +23,10 @@
     spotify
     plymouth
     terraform
+    tailscale
   ];
+
+  services.tailscale = {
+    enable = true;
+  };
 }

@@ -14,8 +14,8 @@
 
   outputs = {nixpkgs, ...} @ inputs: let
     username = "ltechel";
-    host = "TUX";
-    profile = "amd";
+    host = "PC";
+    profile = "nvidia";
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
