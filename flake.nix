@@ -14,8 +14,7 @@
 
   outputs = {nixpkgs, ...} @ inputs: let
     username = "ltechel";
-    host = "PC";
-    profile = "nvidia";
+    host = "TUX";
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
@@ -25,10 +24,8 @@
           inherit inputs;
           inherit username;
           inherit host;
-          inherit profile;
         };
-
-        modules = [./profiles/amd];
+        modules = [./machines/TUX];
       };
       PC = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -36,9 +33,8 @@
           inherit inputs;
           inherit username;
           inherit host;
-          inherit profile;
         };
-        modules = [./profiles/nvidia];
+        modules = [./machines/PC];
       };
     };
   };

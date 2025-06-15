@@ -1,6 +1,6 @@
 {inputs, ...}: {
   imports = [
-    ./syncthing.nix
+    #    ./syncthing.nix
     ./virtualization.nix
     ./fonts.nix
     ./packages.nix

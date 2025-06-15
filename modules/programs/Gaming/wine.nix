@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    bitwarden
-    keepassxc
+    wineWowPackages.waylandFull
   ];
 }
