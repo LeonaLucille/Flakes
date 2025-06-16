@@ -8,6 +8,7 @@ in {
   # Styling Options
   stylix = {
     enable = true;
+    autoEnable = false;
     image = stylixImage;
     # base16Scheme = {
     #   base00 = "282936";
@@ -56,4 +57,3 @@ in {
     };
   };
 }
-

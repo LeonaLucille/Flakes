@@ -83,7 +83,7 @@
         };
         html.enable = true;
         lua.enable = true;
-        css.enable = true;
+        css.enable = false;
         typst.enable = true;
         rust = {
           enable = true;
@@ -124,7 +124,7 @@
       filetree.neo-tree.enable = true;
       notify = {
         nvim-notify.enable = true;
-        nvim-notify.setupOpts.background_colour = "#${config.lib.stylix.colors.base01}";
+        nvim-notify.setupOpts.background_colour = "#FFFFFF";
       };
       utility = {
         preview.markdownPreview.enable = true;
