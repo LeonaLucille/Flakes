@@ -1,4 +1,5 @@
 {
+  hostname = "TUX";
   editor = "neovim";
   browser = "firefox";
   terminal = "kitty";

@@ -3,7 +3,7 @@
   host,
   ...
 }: let
-  inherit (import ../../machines/${host}/variables.nix) stylixImage;
+  inherit (import ../../../machines/${host}/variables.nix) stylixImage;
 in {
   # Styling Options
   stylix = {

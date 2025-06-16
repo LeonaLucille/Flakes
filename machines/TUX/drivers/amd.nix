@@ -8,7 +8,6 @@
 with lib; let
   cfg = config.drivers.amdgpu;
 in {
-  imports = [../../modules/core];
   options.drivers.amdgpu = {
     enable = mkEnableOption "Enable AMD Drivers";
   };

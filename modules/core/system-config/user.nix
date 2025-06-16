@@ -6,7 +6,7 @@
   profile,
   ...
 }: let
-  inherit (import ../../machines/${host}/variables.nix) browser editor terminal timezone locale consoleKeymap;
+  inherit (import ../../../machines/${host}/variables.nix) browser editor terminal timezone locale consoleKeymap;
 in {
   imports = [
     inputs.home-manager.nixosModules.home-manager
@@ -34,7 +34,10 @@ in {
     backupFileExtension = "bak";
     extraSpecialArgs = {inherit inputs username host profile;};
     users.${username} = {
-      imports = [../programs];
+      imports = [
+        ../../programs
+        ../${host}/home-manager
+        ];
 
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "23.11";

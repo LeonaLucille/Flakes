@@ -1,7 +1,5 @@
 {inputs, ...}: {
   imports = [
-    ./system-config
-
-
+    ./Hyprland
   ];
 }

@@ -8,12 +8,7 @@
     (import ./machines/${host}/variables.nix)
     ;
 in {
-  home.file = {
-    "Pictures/Wallpapers" = {
-      source = ../../../images;
-      recursive = true;
-    };
-  };
+
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -86,8 +81,7 @@ in {
       };
     };
     extraConfig = "
-      monitor=DP-2,highrr,auto,auto
-      monitor=DP-3,1920x1080@74.99Hz,auto,auto
+      monitor=eDP-2,preferred,auto,1
     ";
   };
 }

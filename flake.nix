@@ -14,7 +14,6 @@
 
   outputs = {nixpkgs, ...} @ inputs: let
     username = "ltechel";
-    host = "PC";
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
@@ -23,7 +22,6 @@
         specialArgs = {
           inherit inputs;
           inherit username;
-          inherit host;
         };
         modules = [./machines/TUX];
       };
