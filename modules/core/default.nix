@@ -10,6 +10,7 @@
     ./sound.nix
     ./steam.nix
     ./security.nix
+   # ./vscodium.nix
     inputs.stylix.nixosModules.stylix
   ];
 }

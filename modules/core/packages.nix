@@ -24,6 +24,7 @@
     plymouth
     terraform
     tailscale
+    vscodium
   ];
 
   services.tailscale = {

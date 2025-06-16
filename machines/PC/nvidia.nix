@@ -7,6 +7,7 @@
 with lib; let
   cfg = config.drivers.nvidia;
 in {
+  imports = [../../modules/core];
   options.drivers.nvidia = {
     enable = mkEnableOption "Enable Nvidia Drivers";
   };
