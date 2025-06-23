@@ -25,6 +25,7 @@ in {
       "kvm"
       "libvirtd"
       "jackaudio"
+      "docker"
     ];
   };
 
@@ -37,7 +38,7 @@ in {
       imports = [
         ../../programs
         ../${host}/home-manager
-        ];
+      ];
 
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "23.11";

@@ -3,6 +3,7 @@
     lutris
     discord
     vintagestory
+    nfs-utils
   ];
 
   nixpkgs.config = {

@@ -13,10 +13,11 @@
   ];
 
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid" "uas" "sd_mod"];
-  boot.initrd.kernelModules = [];
+  boot.initrd.kernelModules = ["nfs"];
+  boot.initrd.supportedFilesystems = ["nfs"];
   boot.kernelModules = ["kvm-amd" "amd_iommu=on" "nvidia"];
   boot.extraModulePackages = [];
-
+  boot.loader.grub.useOSProber = true;
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/e1b0d132-8127-4f6a-afbd-3ea7f551f070";
     fsType = "btrfs";
@@ -31,6 +32,10 @@
     device = "/dev/disk/by-uuid/CCA8-B5F3";
     fsType = "vfat";
     options = ["fmask=0022" "dmask=0022"];
+  };
+  fileSystems."/media" = {
+    device = "/dev/disk/by-uuid/2E588FE7588FABE1";
+    fsType = "ntfs";
   };
 
   swapDevices = [

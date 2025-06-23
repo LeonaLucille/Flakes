@@ -25,6 +25,7 @@
     terraform
     tailscale
     vscodium
+    guitarix
   ];
 
   services.tailscale = {
