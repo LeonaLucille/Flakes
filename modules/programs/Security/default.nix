@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./keepass.nix
-    #    ./yubikey.nix
+    ./yubikey.nix
   ];
 }

@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./Development
     ./Gaming
     ./Docs
     ./Shell

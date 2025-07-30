@@ -12,6 +12,7 @@ in {
       "$mainMod, Q, exec, $term"
       "$mainMod, B, exec, $browser"
       "$mainMod, R, exec, $menu"
+      "$mainMod, L, exec, $lock"
       # Exit Hyprland
       "$mainMod, M, exit"
       # Animations

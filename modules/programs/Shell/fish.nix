@@ -8,7 +8,7 @@
   programs.fish = {
     enable = true;
     generateCompletions = true;
-    interactiveShellInit = ''
+     interactiveShellInit = ''
       if status is-login
       			exec Hyprland
       end
@@ -19,4 +19,6 @@
       end
     '';
   };
+
+
 }

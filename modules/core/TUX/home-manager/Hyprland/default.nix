@@ -1,10 +1,13 @@
 {pkgs, ...}: {
   imports = [
     ./hyprland.nix
+    ./hyprlock.nix
+    ./hyprpaper.nix
+    ./rofi.nix
+
     ./animations.nix
     ./waybar.nix
     ./binds.nix
-    ./rofi.nix
-    ./hyprpaper.nix
+    ./wlogout.nix
   ];
 }

@@ -8,8 +8,6 @@
     (import ./machines/${host}/variables.nix)
     ;
 in {
-
-
   wayland.windowManager.hyprland = {
     enable = true;
     systemd = {
@@ -82,6 +80,6 @@ in {
     };
     extraConfig = "
       monitor=eDP-2,preferred,auto,1
-    ";
+  ";
   };
 }

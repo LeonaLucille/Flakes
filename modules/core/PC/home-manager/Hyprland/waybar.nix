@@ -140,7 +140,8 @@ in
           }
 
           #custom-power {
-            color: #${config.lib.stylix.colors.base02};
+            background: #${config.lib.stylix.colors.base0E};
+            color: #${config.lib.stylix.colors.base00};
           }
         ''
       ];

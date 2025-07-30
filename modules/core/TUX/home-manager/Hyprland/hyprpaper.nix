@@ -1,4 +1,14 @@
 {pkgs, ...}: {
+
+  home.file = {
+    "Pictures/Wallpapers" = {
+      source = ../../../../../images;
+      recursive = true;
+    };
+  };
+
+
+
   services.hyprpaper = {
     enable = true;
 

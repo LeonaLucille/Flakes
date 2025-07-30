@@ -24,8 +24,12 @@
     plymouth
     terraform
     tailscale
-    vscodium
+   # vscodium
     guitarix
+    libfido2
+    opensc
+    gnupg
+    yubikey-manager
   ];
 
   services.tailscale = {

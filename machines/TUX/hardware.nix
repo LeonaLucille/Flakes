@@ -43,12 +43,12 @@
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp4s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp5s0.useDHCP = lib.mkDefault true;
-
+  networking.nameservers = ["10.10.20.250"];
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   hardware.tuxedo-rs = {
-    enable = true;
-    tailor-gui.enable = true;
+    enable = false;
+    tailor-gui.enable = false;
   };
 }
