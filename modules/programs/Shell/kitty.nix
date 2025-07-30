@@ -1,10 +1,11 @@
 {pkgs,...}: {
 
-programs.kitty.enable = true;
-	
-	
-		home.packages = with pkgs; [
-		neovim
-		firefox
-];
+programs.kitty = 
+	{
+		enable = true;
+		settings = {
+			enabled_layouts = "splits";
+			confirm_os_window_close = 0;
+		};
+	};
 }
