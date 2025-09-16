@@ -6,5 +6,6 @@
     ./binds.nix
     ./rofi.nix
     ./hyprpaper.nix
+    ./wlogout.nix
   ];
 }

@@ -13,6 +13,7 @@ in {
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.download-buffer-size = 524288000;
   users.users.${username} = {
     shell = pkgs.fish;
     ignoreShellProgramCheck = true;
@@ -26,13 +27,15 @@ in {
       "libvirtd"
       "jackaudio"
       "docker"
+      "realtime"
+      "audio"
     ];
   };
 
   home-manager = {
     useGlobalPkgs = false;
     useUserPackages = true;
-    backupFileExtension = "bak";
+    backupFileExtension = "back";
     extraSpecialArgs = {inherit inputs username host profile;};
     users.${username} = {
       imports = [

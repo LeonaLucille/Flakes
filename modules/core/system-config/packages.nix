@@ -12,9 +12,11 @@
     };
   };
 
-  nixpkgs.config.allowUnfree = true;
-  documentation.man.generateCaches = true;
-
+  nixpkgs.config = {
+    allowUnfree = true;
+    android_sdk.accept_license = true;
+    documentation.man.generateCaches = true;
+  };
   environment.systemPackages = with pkgs; [
     python3Full
     fish
@@ -24,12 +26,13 @@
     plymouth
     terraform
     tailscale
-   # vscodium
+    # vscodium
     guitarix
     libfido2
     opensc
     gnupg
     yubikey-manager
+    firefox
   ];
 
   services.tailscale = {

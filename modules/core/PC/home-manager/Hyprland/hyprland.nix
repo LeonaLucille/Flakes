@@ -79,8 +79,8 @@ in {
       };
     };
     extraConfig = "
-      monitor=DP-1,highrr,auto, auto
-      monitor=DP-2, 1920x1080@74.99Hz, auto, auto
+      monitor=desc:XEC MFG27F4Q,highrr,0x0, auto
+      monitor=desc:AOC 2460G5 0x0002B2D6, 1920x1080@74.99Hz, 2560x0, auto
       ";
   };
 }
