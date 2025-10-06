@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./adb.nix
+    #    ./adb.nix
     ./npm.nix
     ./vscodium.nix
   ];

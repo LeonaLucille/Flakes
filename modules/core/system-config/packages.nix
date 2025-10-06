@@ -6,6 +6,7 @@
   programs = {
     hyprland.enable = true;
     hyprland.withUWSM = true;
+
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;

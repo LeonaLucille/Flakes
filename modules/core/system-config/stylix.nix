@@ -29,6 +29,7 @@ in {
     #   base0F = "00f769";
     # };
     polarity = "dark";
+    #targets.anki.enable = false;
     opacity.terminal = 1.0;
     cursor = {
       package = pkgs.bibata-cursors;

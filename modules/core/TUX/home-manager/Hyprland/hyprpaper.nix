@@ -1,21 +1,22 @@
-{pkgs, ...}: {
-
+{
+  pkgs,
+  host,
+  ...
+}: {
   home.file = {
-    "Pictures/Wallpapers" = {
-      source = ../../../../../images;
-      recursive = true;
+    "Pictures/Wallpapers/wallpaper.jpg" = {
+      source = ../../../../../images/invent.jpeg;
     };
   };
-
-
 
   services.hyprpaper = {
     enable = true;
 
     settings = {
-      preload = ["~/Pictures/Wallpapers/invent.jpeg"];
+      preload = ["/home/ltechel/Pictures/Wallpapers/wallpaper.jpg"];
       wallpaper = [
-        ",~/Pictures/Wallpapers/invent.jpeg"
+        ", /home/ltechel/Pictures/Wallpapers/wallpaper.jpg
+      "
       ];
     };
   };
