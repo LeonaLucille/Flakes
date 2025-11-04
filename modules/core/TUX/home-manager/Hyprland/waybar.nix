@@ -10,50 +10,52 @@ in
   with lib; {
     programs.waybar = {
       enable = true;
-      package = pkgs.waybar;
 
       settings = [
         {
           layer = "top";
           position = "top";
+          spacing = 4;
           modules-left = ["group/left"];
           modules-center = ["group/center"];
           modules-right = ["group/right"];
 
           "group/left" = {
-            modules = ["mpris"];
+            modules = ["hyprland/workspaces"];
             orientation = "horizontal";
           };
 
           "group/center" = {
-            modules = ["clock" "hyprland/workspaces" "group/infos"];
+            modules = ["hyprland/window"];
             orientation = "horizontal";
           };
           "group/right" = {
-            modules = ["custom/notification" "custom/power"];
+            modules = ["mpris" "clock" "battery" "custom/notification" "custom/power"];
             orientation = "horizontal";
           };
 
-          "group/infos" = {
-            orientation = "inherit";
-            drawer = {
-              transition-duration = 500;
-              transition-left-to-right = false;
-            };
-            modules = ["battery" "bluetooth" "network"];
+          "mpris" = {
+            format = "{player_icon} {dynamic}";
+            interval = 1;
           };
 
           "hyprland/workspaces" = {
-            format = "{icon}";
-            on-click = "activate";
-            format-icons = {
-              default = "󰫣 ";
-              active = "󰫢 ";
-            };
+           all-outputs = true;
+           format = "{icon}";
+           format-icons = {
+            default = "";
+            active = "";
+           };
+          };
+          
+          "hyprland/window" = {
+           format = "{title}";
+           max-length = 40;
+           all-outputs = true;
           };
 
           "clock" = {
-            format = "{:%d/%m/%Y - %H:%M}";
+            format = "{:%d/%m/%Y-%H:%M}";
             tooltip = false;
           };
 
@@ -91,10 +93,10 @@ in
               critical = 20;
             };
             format = "{icon} {capacity}";
-            format-charging = "";
-            format-plugged = "";
-            format-alt = "";
-            format-icons = "";
+            format-icons = 
+              ["" "" "" "" "" "" "" ""];
+            on-click = "";
+            on-click-right = "pkill waybar & hyprctl dispatch exec waybar";
           };
 
           "network" = {
@@ -141,6 +143,8 @@ in
 
           #custom-power {
             color: #${config.lib.stylix.colors.base02};
+            padding: 0px 10px;
+
           }
         ''
       ];

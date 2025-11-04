@@ -1,6 +1,7 @@
 {inputs, ...}: {
   imports = [
     #    ./syncthing.nix
+    ./greetd.nix
     ./virtualization.nix
     ./fonts.nix
     ./packages.nix

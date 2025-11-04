@@ -46,7 +46,7 @@
   networking.nameservers = ["10.10.20.250"];
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
+  hardware.graphics.enable = true;
   hardware.tuxedo-rs = {
     enable = false;
     tailor-gui.enable = false;

@@ -28,8 +28,8 @@ in {
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        "col.active_border" = "rgb(${config.lib.stylix.colors.base00}) 45deg";
-        "col.inactive_border" = "rgb(${config.lib.stylix.colors.base00})";
+        #"col.active_border" = "rgb(${config.lib.stylix.colors.base00}) 45deg";
+        #"col.inactive_border" = "rgb(${config.lib.stylix.colors.base00})";
         resize_on_border = true;
         allow_tearing = false;
         layout = "dwindle";
@@ -54,7 +54,7 @@ in {
           enabled = true;
           range = 4;
           render_power = 3;
-          color = "rgba(1a1a1aee)";
+          #color = "rgb(${config.lib.stylix.colors.base00})";
         };
         blur = {
           enabled = true;
@@ -79,7 +79,8 @@ in {
       };
     };
     extraConfig = "
-      monitor=eDP-2,preferred,auto,1
-  ";
+      monitor=eDP-2,preferred,auto,1    
+      monitor=desc:XEC MFG27F4Q, 2560x1440@144.00Hz, auto-right, 1
+      ";
   };
 }

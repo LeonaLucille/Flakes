@@ -51,7 +51,7 @@
 
       spellcheck = {
         enable = true;
-        languages = ["en"];
+        languages = ["en" "de"];
         programmingWordlist.enable = true;
       };
 
@@ -103,7 +103,6 @@
 
       statusline.lualine = {
         enable = true;
-        theme = "base16";
       };
 
       autopairs.nvim-autopairs.enable = true;
@@ -164,32 +163,33 @@
       comments = {
         comment-nvim.enable = true;
       };
+      luaConfigPost = ''
+        -- Nix LSP (nil) configuration for auto-eval-inputs
+        local lspconfig = require('lspconfig')
+        lspconfig.nil_ls.setup({
+          settings = {
+            ['nil'] = {
+              nix = {
+                auto_eval_inputs = true,
+              },
+            },
+          },
+        })
+
+        -- Auto-update programming wordlist on first startup
+        vim.api.nvim_create_autocmd("VimEnter", {
+          callback = function()
+            -- Check if dirtytalk dict file exists
+            local dict_path = vim.fn.stdpath('data') .. '/site/spell/programming.utf-8.add'
+            if vim.fn.filereadable(dict_path) == 0 then
+              -- Only run if file doesn't exist to avoid repeated downloads
+              vim.schedule(function()
+                vim.cmd('DirtytalkUpdate')
+              end)
+            end
+          end,
+        })
+      '';
     };
-  };
-
-  # Source custom Lua explicitly
-  home.file.".config/nvim/init.lua" = {
-    text = ''
-      vim.notify("Main init.lua loaded", vim.log.levels.INFO)
-      pcall(require, "custom.init")
-    '';
-  };
-
-  home.file.".config/nvim/lua/custom/init.lua" = {
-    text = ''
-      -- Debug notification
-      vim.notify("Custom Lua loaded", vim.log.levels.INFO)
-      -- Diagnostics configuration (fallback)
-      vim.diagnostic.config({
-        virtual_text = {
-          spacing = 4,
-          prefix = "●"
-        },
-        signs = true,
-        underline = true,
-        update_in_insert = false,
-        severity_sort = true
-      })
-    '';
   };
 }

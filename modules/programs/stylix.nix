@@ -1,10 +1,10 @@
 {...}: {
   stylix.targets = {
     waybar.enable = true;
-    rofi.enable = false;
-    #hyprland.enable = false;
-    #hyprlock.enable = false;
-    #kitty.enable = true;
+    rofi.enable = true;
+    hyprland.enable = true;
+    hyprlock.enable = true;
+     kitty.enable = true;
     #qt.enable = false;
   };
 }

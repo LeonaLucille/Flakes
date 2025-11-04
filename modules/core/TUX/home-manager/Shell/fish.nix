@@ -9,6 +9,7 @@
     enable = true;
     generateCompletions = true;
      interactiveShellInit = ''
+      direnv hook fish | source
       if status is-login
       			exec Hyprland
       end
@@ -18,6 +19,10 @@
         gpgconf --launch gpg-agent
       end
     '';
+    shellAliases = {
+      cat = "bat";
+
+    };
   };
 
 

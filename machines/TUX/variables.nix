@@ -6,5 +6,5 @@
   locale = "de_DE.UTF-8";
   timezone = "Europe/Berlin";
   consoleKeymap = "de";
-  stylixImage = ../../images/invent.jpeg;
+  stylixImage = ../../images/everysound.jpg;
 }

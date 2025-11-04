@@ -5,7 +5,7 @@
 }: {
   home.file = {
     "Pictures/Wallpapers/wallpaper.jpg" = {
-      source = ../../../../../images/invent.jpeg;
+      source = ../../../../../images/everysound.jpg;
     };
   };
 
