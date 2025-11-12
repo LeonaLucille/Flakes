@@ -23,7 +23,7 @@
   outputs = {nixpkgs, ...} @ inputs: let
     username = "ltechel";
     system = "x86_64-linux";
-    host = "TUX";
+    host = "PC";
   in {
     nixosConfigurations = {
       TUX = nixpkgs.lib.nixosSystem {

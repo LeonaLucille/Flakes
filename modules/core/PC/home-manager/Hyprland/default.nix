@@ -1,5 +1,8 @@
 {pkgs, ...}: {
   imports = [
+    ./hypridle.nix
+    ./hyprlock.nix
+    ./sway.nix
     ./hyprland.nix
     ./animations.nix
     ./waybar.nix

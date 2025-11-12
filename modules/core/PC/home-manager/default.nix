@@ -1,5 +1,6 @@
 {inputs, ...}: {
   imports = [
     ./Hyprland
+    ./Shell
   ];
 }

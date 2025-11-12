@@ -28,8 +28,8 @@ in {
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        "col.active_border" = "rgb(${config.lib.stylix.colors.base00}) 45deg";
-        "col.inactive_border" = "rgb(${config.lib.stylix.colors.base00})";
+        #"col.active_border" = "rgb(${config.lib.stylix.colors.base00}) 45deg";
+        #"col.inactive_border" = "rgb(${config.lib.stylix.colors.base00})";
         resize_on_border = true;
         allow_tearing = false;
         layout = "dwindle";
@@ -54,7 +54,7 @@ in {
           enabled = true;
           range = 4;
           render_power = 3;
-          color = "rgba(1a1a1aee)";
+          #  color = "rgba(1a1a1aee)";
         };
         blur = {
           enabled = true;
@@ -80,7 +80,7 @@ in {
     };
     extraConfig = "
       monitor=desc:XEC MFG27F4Q,highrr,0x0, auto
-      monitor=desc:AOC 2460G5 0x0002B2D6, 1920x1080@74.99Hz, 2560x0, auto
+      monitor=desc:AOC 2460G5 0x0002B2D6, 1920x1080@74.99Hz, auto-left, auto
       ";
   };
 }
