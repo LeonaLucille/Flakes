@@ -4,18 +4,19 @@
   ...
 }: {
   home.file = {
-    "Pictures/Wallpapers/wallpaper.jpg" = {
-      source = ../../../../../images/everysound.jpg;
+    "Pictures/Wallpapers" = {
+      source = ../../../../../images;
+      recursive = true;
     };
   };
 
   services.hyprpaper = {
-    enable = true;
+    enable = false;
 
     settings = {
-      preload = ["/home/ltechel/Pictures/Wallpapers/wallpaper.jpg"];
+      preload = ["/home/ltechel/Pictures/Wallpapers/loathe.jpg"];
       wallpaper = [
-        ", /home/ltechel/Pictures/Wallpapers/wallpaper.jpg
+        ", /home/ltechel/Pictures/Wallpapers/loathe.jpg
       "
       ];
     };

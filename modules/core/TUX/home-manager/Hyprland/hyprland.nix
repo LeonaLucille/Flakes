@@ -72,6 +72,7 @@ in {
 
       exec-once = [
         "waybar"
+        "wpaperd -d"
       ];
 
       input = {

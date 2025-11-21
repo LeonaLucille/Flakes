@@ -10,5 +10,6 @@
     ./waybar.nix
     ./binds.nix
     ./wlogout.nix
+    ./wpaperd.nix
   ];
 }

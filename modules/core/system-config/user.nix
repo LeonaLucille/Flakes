@@ -12,8 +12,17 @@ in {
     inputs.home-manager.nixosModules.home-manager
   ];
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    glib
+    gst_all_1.gstreamer
+    alsa-lib
+
+  ];
+
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.settings.download-buffer-size = 524288000;
+  nix.settings.trusted-users = [ "root" "ltechel" ];
   users.users.${username} = {
     shell = pkgs.fish;
     ignoreShellProgramCheck = true;
@@ -35,7 +44,7 @@ in {
   home-manager = {
     useGlobalPkgs = false;
     useUserPackages = true;
-    backupFileExtension = "hm-backup";
+    backupFileExtension = "hm";
     extraSpecialArgs = {inherit inputs username host profile;};
     users.${username} = {
       imports = [
