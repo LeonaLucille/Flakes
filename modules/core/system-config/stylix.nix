@@ -10,7 +10,8 @@ in {
     enable = true;
     autoEnable = false;
     image = stylixImage;
- 
+
+    overlays.enable = true;
     polarity = "dark";
     opacity.terminal = 1.0;
     cursor = {

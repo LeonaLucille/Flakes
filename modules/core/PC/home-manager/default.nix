@@ -1,6 +1,6 @@
 {inputs, ...}: {
   imports = [
-    ./Hyprland
-    ./Shell
+    #./Hyprland
+    #./Shell
   ];
 }

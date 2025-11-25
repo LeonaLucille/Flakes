@@ -1,12 +1,14 @@
 {pkgs, ...}: {
   imports = [
     ./Audio
+    ./Desktop
     ./Development
-    ./Gaming
     ./Docs
+    ./Gaming
     ./stylix.nix
     ./xdg.nix
     ./Security
+    ./Shell
     ./Work
   ];
 }

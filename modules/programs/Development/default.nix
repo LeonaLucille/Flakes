@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   imports = [
     #    ./adb.nix
     ./npm.nix

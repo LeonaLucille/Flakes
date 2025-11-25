@@ -20,7 +20,7 @@
     documentation.man.generateCaches = true;
   };
   environment.systemPackages = with pkgs; [
-    python3Full
+    python3
     fish
     playerctl
     git
@@ -29,12 +29,12 @@
     terraform
     tailscale
     # vscodium
-    guitarix
     libfido2
     opensc
     gnupg
     yubikey-manager
     firefox
+    wl-clipboard
   ];
 
   services.tailscale = {

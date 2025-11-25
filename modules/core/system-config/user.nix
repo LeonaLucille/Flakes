@@ -17,12 +17,11 @@ in {
     glib
     gst_all_1.gstreamer
     alsa-lib
-
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.settings.download-buffer-size = 524288000;
-  nix.settings.trusted-users = [ "root" "ltechel" ];
+  nix.settings.trusted-users = ["root" "ltechel"];
   users.users.${username} = {
     shell = pkgs.fish;
     ignoreShellProgramCheck = true;
@@ -57,7 +56,6 @@ in {
       home.sessionVariables = {
       };
     };
-
   };
 
   boot = {
