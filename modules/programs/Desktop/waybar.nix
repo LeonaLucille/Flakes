@@ -10,7 +10,7 @@
   stylix = config.lib.stylix.colors;
 in {
   programs.waybar = {
-    enable = true;
+    enable = false;
 
     settings = [
       {

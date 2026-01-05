@@ -18,8 +18,8 @@ in {
     };
 
     xwayland = {
-    enable = true;
-};
+      enable = true;
+    };
     settings = {
       "$term" = "kitty";
       "$browser" = "firefox";
@@ -74,8 +74,6 @@ in {
       };
 
       exec-once = [
-        "waybar"
-        "wpaperd -d"
       ];
 
       input = {
