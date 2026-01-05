@@ -5,6 +5,7 @@
   config,
   lib,
   modulesPath,
+  pkgs, 
   ...
 }: {
   imports = [
@@ -13,7 +14,7 @@
 
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "thunderbolt" "usbhid" "usb_storage" "sd_mod"];
   boot.kernelModules = ["kvm-amd"];
-  boot.initrd.kernelModules = [];
+  boot.initrd.kernelModules = ["amdgpu"];
   boot.extraModulePackages = [];
 
   fileSystems."/" = {
@@ -47,6 +48,7 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.graphics.enable = true;
+  hardware.graphics.extraPackages = with pkgs; [rocmPackages.clr.icd ];
   hardware.tuxedo-rs = {
     enable = false;
     tailor-gui.enable = false;

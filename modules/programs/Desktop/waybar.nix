@@ -34,7 +34,7 @@ in {
           orientation = "horizontal";
         };
         "group/right" = {
-          modules = ["mpris" "clock" "custom/notification"];
+          modules = ["mpris" "clock" "battery" "custom/notification"];
           orientation = "horizontal";
         };
 
@@ -91,7 +91,7 @@ in {
             warning = 30;
             critical = 20;
           };
-          format = "{icon} {capacity}";
+          format = "{icon}  {capacity}";
           format-icons = ["" "" "" "" "" "" "" ""];
           on-click = "";
           on-click-right = "pkill waybar & hyprctl dispatch exec waybar";
@@ -119,34 +119,63 @@ in {
     style =
       lib.mkAfter
       ''
-        * {
-            font-family: JetBrainsMono Nerd Font Mono;
-            border: none;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 15px;
-        }
+                             * {
+                                 font-family: JetBrainsMono Nerd Font Mono;
+                                 border: none;
+                                 border-radius: 20px;
+                                 font-weight: bold;
+                                 font-size: 15px;
+                             }
 
-        window#waybar {
+                             window#waybar {
+                             background: transparent;
+                               color: #${stylix.base05};
+
+                               }
+
+                             window#hyprland {
+                               color: #${stylix.base05};
+
+                             }
+                             workspaces#hyprland{
+                               color: #${stylix.base05};
+
+                             }
+                             #clock,
+                             #battery,
+                             #custom-notification {
+                               font-weight: bold;
+                               padding: 0px 10px;
+                               color: #${stylix.base05};
+                               background: transparent;
+                             }
+
+                             #custom-power {
+                               color: @base01;
+                               padding: 0px 10px;
+
+                             }
+
+
+                          .modules-center {
+                               border: 2px solid;
+              margin: 10px 0 0 0;
+              padding: 0 10px 0 10px;
+                             }
+                          .modules-left {
+                            margin: 10px 0 0 10px;
+                    padding: 0 0 0 7px;
+                               border: 2px solid;
+
+                             }
+
+                          .modules-right {
+                            border: 2px solid;
+        margin: 10px 10px 0 0;
+        padding: 0 10px 0 10px;
         background: transparent;
-        color: #${stylix.base05}
-          }
-        window#hyprland {
-                    color: #${stylix.base05};
+                          }
 
-        }
-        #clock {
-          font-weight: bold;
-          padding: 0px 10px;
-          color: #${stylix.base05};
-          background: transparent;
-        }
-
-        #custom-power {
-          color: @base01;
-          padding: 0px 10px;
-
-        }
       '';
   };
 }

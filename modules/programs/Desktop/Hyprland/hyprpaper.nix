@@ -3,12 +3,6 @@
   host,
   ...
 }: {
-  home.file = {
-    "/home/ltechel/Pictures/Wallpapers" = {
-      source = ../../../../images;
-      recursive = true;
-    };
-  };
 
   services.hyprpaper = {
     enable = false;

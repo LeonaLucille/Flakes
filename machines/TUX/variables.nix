@@ -6,5 +6,5 @@
   locale = "de_DE.UTF-8";
   timezone = "Europe/Berlin";
   consoleKeymap = "de";
-  stylixImage = ../../images/loathe.jpg;
+  stylixImage = ../../images/everysound.jpg;
 }

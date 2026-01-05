@@ -4,6 +4,7 @@
 
     ./cliphist.nix
     ./rofi.nix
+    ./quickshell.nix
     ./sway.nix
     ./waybar.nix
     ./wlogout.nix

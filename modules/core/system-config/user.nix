@@ -43,14 +43,17 @@ in {
   home-manager = {
     useGlobalPkgs = false;
     useUserPackages = true;
-    backupFileExtension = "hm";
+    backupFileExtension = "hm-b";
     extraSpecialArgs = {inherit inputs username host profile;};
     users.${username} = {
       imports = [
         ../../programs
         ../${host}/home-manager
       ];
-
+       home.file."/home/ltechel/Pictures/Wallpapers" = {
+       source = ../../../images;
+       recursive = true;
+   };
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "25.05";
       home.sessionVariables = {

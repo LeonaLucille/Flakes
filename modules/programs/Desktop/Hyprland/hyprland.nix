@@ -17,7 +17,9 @@ in {
       variables = ["--all"];
     };
 
-    xwayland.enable = true;
+    xwayland = {
+    enable = true;
+};
     settings = {
       "$term" = "kitty";
       "$browser" = "firefox";
@@ -83,6 +85,10 @@ in {
     extraConfig = "
       monitor=desc:XEC MFG27F4Q,highrr,0x0, auto
       monitor=desc:AOC 2460G5 0x0002B2D6, 1920x1080@74.99Hz, auto-left, auto
+      xwayland {
+  force_zero_scaling = true
+}
+
       ";
   };
 }
