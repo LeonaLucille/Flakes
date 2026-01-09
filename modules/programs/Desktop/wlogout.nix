@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  programs.wlogout.enable = true;
+  programs.wlogout.enable = false;
 }

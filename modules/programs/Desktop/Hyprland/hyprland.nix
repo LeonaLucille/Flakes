@@ -23,9 +23,9 @@ in {
     settings = {
       "$term" = "kitty";
       "$browser" = "firefox";
-      "$menu" = "rofi -show drun";
+      "$menu" = "noctalia-shell ipc call launcher toggle";
       "$filemanager" = "yazi";
-      "$lock" = "hyprlock";
+      "$lock" = "noctalia-shell ipc call lockScreen lock";
 
       general = {
         gaps_in = 5;
@@ -74,6 +74,7 @@ in {
       };
 
       exec-once = [
+        "NOCTALIA_REALNAME=Leona noctalia-shell"
       ];
 
       input = {

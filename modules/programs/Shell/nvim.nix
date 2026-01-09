@@ -44,7 +44,11 @@
 	settings = {
 	browser = "firefox";
 	};
-};
+     };
+     neo-tree = {
+	enable = true;
+	autoLoad=true;
+     };
     };
   };
 }

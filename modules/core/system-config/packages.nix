@@ -3,7 +3,6 @@
   inputs,
   ...
 }: {
-
   programs = {
     hyprland.enable = true;
     hyprland.withUWSM = true;
@@ -40,4 +39,5 @@
   services.tailscale = {
     enable = true;
   };
+  services.upower.enable = true;
 }
