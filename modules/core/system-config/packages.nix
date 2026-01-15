@@ -34,7 +34,8 @@
     yubikey-manager
     firefox
     wl-clipboard
-  ];
+	openvswitch
+];
 
   services.tailscale = {
     enable = true;

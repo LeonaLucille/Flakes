@@ -15,7 +15,7 @@
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid" "uas" "sd_mod"];
   boot.initrd.kernelModules = ["nfs"];
   boot.initrd.supportedFilesystems = ["nfs"];
-  boot.kernelModules = ["kvm-amd" "amd_iommu=on" "nvidia"];
+  boot.kernelModules = ["kvm-amd" "amd_iommu=on" "nvidia openvswitch"];
   boot.extraModulePackages = [];
   boot.loader.grub.useOSProber = true;
   fileSystems."/" = {

@@ -1,3 +1,3 @@
 {pkgs,...}:  {
-  services.swaync.enable = w;
+  services.swaync.enable = true;
 }

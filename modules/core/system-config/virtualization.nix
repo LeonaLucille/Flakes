@@ -14,11 +14,14 @@
     };
     docker.enable = true;
     podman.enable = false;
+    vswitch.enable = true;
   };
   programs = {
     virt-manager.enable = true;
-  };
-  environment.systemPackages = with pkgs; [
+	
+};
+
+environment.systemPackages = with pkgs; [
     virt-viewer # View Virtual Machines
     swtpm
     docker-compose

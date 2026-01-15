@@ -48,7 +48,6 @@ in {
     users.${username} = {
       imports = [
         ../../programs
-        ../${host}/home-manager
       ];
        home.file."/home/ltechel/Pictures/Wallpapers" = {
        source = ../../../images;
